@@ -23,6 +23,7 @@ Cat.destroy_all
     puts "Cat created"
 end
 
+User.destroy_all
 10.times.with_index do |user, index|
     user = User.create(
         email: Faker::Internet.email,

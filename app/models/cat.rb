@@ -9,4 +9,7 @@ class Cat < ApplicationRecord
         presence: true
     validates :price,
         presence: true
+
+    has_many :orders
+    has_many :carts, through: :orders
 end
