@@ -1,0 +1,19 @@
+<center>
+    <div class="container" id="cart_list">
+        <h1>Cart</h1>
+        <ul>
+            <% @cart.orders.each do |order| %>
+                <li> <%= order.cat.title %> <%= link_to "Supprimer l'article", cart_path(order), method: :delete %> </li>
+            <% end %>
+        </ul>
+    </div>
+
+    <%= link_to do %>
+        <button type="button" class="btn btn-dark"> Confirmer la commande </button>
+    <% end %> 
+
+
+</center>
+
+
+<p> <%= link_to "Retour aux chatons", root_path %> </p>

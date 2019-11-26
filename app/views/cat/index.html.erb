@@ -1,6 +1,4 @@
-<h1>Cat#index</h1>
-<p>Find me in app/views/cat/index.html.erb</p>
-
+<%= render 'layouts/banner' %>
 
 <div class="container">
     <div class="row">
@@ -13,6 +11,7 @@
                     <%= cat.description %></br>
                     <%= cat.price %></br>
                     <img style="max-width:100% ; max-height:100%" src="<%= cat.image_url %>" >
+                    <%= link_to "Ajouter au panier", new_order_path(cat) %>
                 </div>
             </div>
         <% end %>

@@ -5,4 +5,26 @@
  */
 body {
   padding-top: 0px;
+  
+}
+
+.hero-image {
+  background-image: url("https://image.shutterstock.com/image-photo/british-shorthair-cat-lying-on-260nw-684452362.jpg");
+  height: 65vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  margin: 0 auto;
+  width: 30em;
+  text-align: center;
+  color: rgb(143, 63, 63);
+  font-size:vw
+}
+
+#cart_list {
+  max-width: 22%;
 }
