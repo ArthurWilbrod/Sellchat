@@ -11,7 +11,9 @@
                     <%= cat.description %></br>
                     <%= cat.price %></br>
                     <img style="max-width:100% ; max-height:100%" src="<%= cat.image_url %>" >
-                    <%= link_to "Ajouter au panier", new_order_path(cat) %>
+                    <% if current_user %>
+                        <%= link_to "Ajouter au panier", new_order_path(cat) %>
+                    <% end %>           
                 </div>
             </div>
         <% end %>

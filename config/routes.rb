@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   resources :cat
   resources :order
   resources :cart, only: [:show, :destroy]
+  resources :confirmedorder
 
 end

@@ -12,4 +12,6 @@ class Cat < ApplicationRecord
 
     has_many :orders
     has_many :carts, through: :orders
+    has_many :join_table_confirmedorder_cats
+    has_many :confirmedorders, through: :join_table_confirmedorder_cats
 end

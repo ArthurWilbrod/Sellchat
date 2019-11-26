@@ -1,8 +1,9 @@
 class CatController < ApplicationController
   def index
     @cat_array = Cat.all
-    @orders_in_cart = Order.where(cart_id:current_user.cart.id).count
-    puts @orders_in_cart
+    if current_user
+      @orders_in_cart = Order.where(cart_id:current_user.cart.id).count
+    end
   end
 
   def show
